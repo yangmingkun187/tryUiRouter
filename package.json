@@ -1,0 +1,27 @@
+{
+  "name": "try-ui-router",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yangmingkun187/tryUiRouter.git"
+  },
+  "keywords": [
+    "angularjs",
+    "ui-router"
+  ],
+  "author": "Jason Yang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yangmingkun187/tryUiRouter/issues"
+  },
+  "homepage": "https://github.com/yangmingkun187/tryUiRouter#readme",
+  "devDependencies": {
+    "angular": "^1.5.6",
+    "angular-ui-router": "^0.3.1"
+  }
+}
