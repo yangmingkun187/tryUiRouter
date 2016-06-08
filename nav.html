@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>navBar</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+</head>
+<body>
+<div class="navBar">
+    <ul>
+        <a ui-sref="product"><li >产品</li></a>
+        <a ui-sref="tourism"><li >行程</li></a>
+        <li>订单</li>
+        <li>库存</li>
+        <li>系统</li>
+    </ul>
+</div>
+<div ui-view class="content"></div>
+<script>
+    var app = angular.module('app', ['ui.router']);
+    app.config(function($stateProvider, $urlRouterProvider) {
+        //
+        // For any unmatched url, redirect to /state1
+        $urlRouterProvider.otherwise("/product");
+        //
+        // Now set up the states
+        $stateProvider
+                .state('product', {
+                    url: "/product",
+                    templateUrl: "/template/nav/product.html",
+                    controller: function($scope) {
+                        $scope.productList = [
+                            {
+                                name: '产品1',
+                                id : '1'
+                            },{
+                                name: '产品2',
+                                id : '2'
+                            },{
+                                name: '产品3',
+                                id : '3'
+                            }
+                        ];
+                    }
+                })
+                .state('product.edit', {
+                    url: "/edit",
+                    params: {
+                        param1: null
+                    },
+                    templateUrl: "template/nav/edit/product.edit.html",
+                    controller: function($scope,$stateParams) {
+                        $scope.postData = $stateParams;
+                    }
+                })
+                .state('tourism', {
+                    url: "/tourism",
+                    templateUrl: "template/nav/tourism.html",
+                    controller: function($scope) {
+                        $scope.tourismList = [
+                            {
+                                name: '行程1',
+                                id : '1'
+                            },{
+                                name: '行程2',
+                                id : '2'
+                            },{
+                                name: '行程3',
+                                id : '3'
+                            }
+                        ];
+                    }
+                })
+                .state('tourism.edit', {
+                    url: "/edit",
+                    params: {
+                        param1: null
+                    },
+                    templateUrl: "template/nav/edit/tourism.edit.html",
+                    controller: function($scope,$stateParams) {
+                        $scope.postData = $stateParams;
+                    }
+                });
+    });
+</script>
+</body>
+</html>

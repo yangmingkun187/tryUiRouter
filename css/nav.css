@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+}
+.navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    border-right: 2px solid black;
+    padding:40px 10px;
+}
+.navBar li {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.content {
+    position: fixed;
+    top: 0;
+    left: 120px;
+    padding:40px 10px;
+    width: 980px;
+    height:100%;
+}
+.content li,.content h1{
+    margin-bottom: 20px;
+}
