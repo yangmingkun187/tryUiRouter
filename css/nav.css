@@ -23,9 +23,16 @@ body {
     top: 0;
     left: 120px;
     padding:40px 10px;
-    width: 980px;
+    width: 300px;
     height:100%;
+    border-right: 1px solid black;
 }
 .content li,.content h1{
     margin-bottom: 20px;
+}
+.editContent {
+    position: fixed;
+    top: 0;
+    left: 500px;
+    padding:40px 10px;
 }
