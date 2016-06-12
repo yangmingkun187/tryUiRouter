@@ -7,12 +7,13 @@
     <script src="../../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
 </head>
 <body>
-<h1>这里是产品列表</h1>
-<ul>
-    <li ng-repeat="product in productList track by $index">{{product.name}}
-        <a ui-sref="product.edit({param1: product})">编辑</a>
-    </li>
-</ul>
-<div ui-view></div>
+<div ui-view class="content">
+    <h1>这里是产品列表</h1>
+    <ul>
+        <li ng-repeat="product in productList track by $index">{{product.name}}
+            <a ui-sref="product.edit({param1: product})">编辑</a>
+        </li>
+    </ul>
+</div>
 </body>
 </html>
