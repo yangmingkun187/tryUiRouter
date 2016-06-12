@@ -1,0 +1,8 @@
+<div class="content" ui-view>
+    <h1>这里是行程列表</h1>
+    <ul>
+        <li ng-repeat="tourism in tourismList track by $index">{{tourism.name}}
+            <a ui-sref="tourism.edit({param1: tourism})">编辑</a>
+        </li>
+    </ul>
+</div>
